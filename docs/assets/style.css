@@ -1,36 +1,18 @@
 body {
-	width: 100wh;
-	height: 90vh;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 40px 20px;
 	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background: linear-gradient(-45deg, #0B0E27, #1A0F3F, #FF006E, #00D9FF);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-}
-
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+	animation: Gradient 30s ease infinite;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
 }
 
 @keyframes Gradient {
@@ -45,52 +27,80 @@ body {
 	}
 }
 
-h1,
-h6 {
-	font-family: 'Open Sans';
+h2 {
+	color: #ffffff;
 	font-weight: 300;
-	text-align: center;
-	position: absolute;
-	top: 45%;
-	right: 0;
-	left: 0;
+	margin: 20px 0 0 0;
 }
 
-.shake {
-	animation: shake-animation 4.72s ease infinite;
-	transform-origin: 50% 50%;
-  }
-  .element {
-	margin: 0 auto;
-	width: 150px;
-	height: 150px;
-	background: red;
-  }
-  @keyframes shake-animation {
-	 0% { transform:translate(0,0) }
-	1.78571% { transform:translate(5px,0) }
-	3.57143% { transform:translate(0,0) }
-	5.35714% { transform:translate(5px,0) }
-	7.14286% { transform:translate(0,0) }
-	8.92857% { transform:translate(5px,0) }
-	10.71429% { transform:translate(0,0) }
-	100% { transform:translate(0,0) }
+  .header {
+	text-align: center;
+	margin-bottom: 30px;
   }
 
   .backdrop {
-	  -moz-box-shadow: 0px 6px 5px #111; 
-	  -webkit-box-shadow: 0px 6px 5px #111; 
-	  box-shadow: 0px 2px 10px #111; 
-	  -moz-border-radius:190px; 
-	  -webkit-border-radius:190px; 
-	  border-radius:190px;
+	box-shadow: 0px 2px 10px #111;
+	border-radius: 190px;
   }
 
   .linktree {
-	  width: 120px;
-	  height: 120px;
-	  background-image: url("https://avatars.githubusercontent.com/u/106186354?v=4");
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-position: 50% 50%;
+	width: 120px;
+	height: 120px;
+	background-image: url("./viktor.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+  }
+
+  .buttons-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	justify-content: center;
+	padding: 0 20px;
+	width: 100%;
+	max-width: 1200px;
+  }
+
+  .button-item {
+	flex: 1 1 auto;
+	min-width: 180px;
+	padding: 8px 12px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border-radius: 5px;
+	background: transparent;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	cursor: pointer;
+  }
+
+  .button-item i {
+	font-size: 1.1em;
+  }
+
+  .button-item:hover {
+	transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+	.button-item {
+		flex: 1 1 100%;
+		min-width: auto;
+		font-size: 0.85rem;
+	}
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+	.button-item {
+		flex: 1 1 calc(50% - 6px);
+		min-width: auto;
+	}
+  }
   }
